@@ -1,0 +1,20 @@
+.container{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+}
+
+.row{
+    display:flex;
+    flex:auto;
+}
+
+.pixel{
+    border:1px solid black;
+    width:auto;
+    flex:auto;
+}
+body{
+    margin:0;
+}
+
