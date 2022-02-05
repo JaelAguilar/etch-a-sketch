@@ -1,7 +1,8 @@
 .container{
     display:flex;
     flex-direction:column;
-    height:100vh;
+    width:50vw;
+    height:50vw;
 }
 
 .row{
@@ -20,4 +21,8 @@ body{
 
 .pixel:hover{
     background-color: gray;
+}
+
+body,html{
+    height:100%;
 }
