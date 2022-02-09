@@ -24,7 +24,7 @@
 }
 
 .pixel{
-    border:1px solid black;
+    /*border:1px solid black;*/
     width:auto;
     flex:auto;
     background-color: white;
@@ -36,6 +36,10 @@ body{
 .pixel:hover{
     background-color: rgb(218, 217, 217);
 }
+.pixel.colored{
+    background-color:black;
+}
+
 
 body,html{
     height:100%;
