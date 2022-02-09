@@ -1,9 +1,18 @@
 .pixels-container{
     display:flex;
     flex-direction:column;
-    width:50vw;
-    height:50vw;
-    max-height:80vh;
+    width:45vw;
+    height:45vw;
+    max-height:70vh;
+
+}
+.grid-container{
+    margin:10px;
+    border-radius:20px;
+    padding:3%;
+    background-color: red;
+    width: fit-content;
+    height:fit-content;
 }
 
 .row{
@@ -15,13 +24,14 @@
     border:1px solid black;
     width:auto;
     flex:auto;
+    background-color: white;
 }
 body{
     margin:0;
 }
 
 .pixel:hover{
-    background-color: rgba(128, 128, 128, 0.507);
+    background-color: rgb(218, 217, 217);
 }
 
 body,html{
