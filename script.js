@@ -4,13 +4,18 @@ let gridInput = document.querySelector("#gridValue")
 let inputButton= document.querySelector(".changeButton")
 console.log(gridInput)
 
+
 generateGrid(gridValue);
+
+setInterval(() => {
+  inputChanged()
+}, 100)
 
 
 function generateGrid(value) {
     for (let i = 0; i < value; i++) {
       let row = document.createElement("div")
-      for (let i = 0; i < value; i++) {
+      for (let j = 0; j < value; j++) {
         let pixel = document.createElement("div")
         pixel.classList.add("pixel")
         row.appendChild(pixel)
@@ -25,9 +30,8 @@ function generateGrid(value) {
 function changeGrid() {
     alert("Introduzca")
 }
-setInterval(() => {
-  inputChanged()
-}, 100);
+
+
 function inputChanged() {
   //console.log(gridInput.value)
   inputButton.disabled = !isInputValid(gridInput.value);
