@@ -8,7 +8,7 @@ console.log(gridInput)
 generateGrid(gridValue);
 
 setInterval(() => {
-  inputChanged()
+  inputButton.disabled = !isInputValid(gridInput.value)
 }, 100)
 
 
@@ -32,12 +32,6 @@ function changeGrid() {
 }
 
 
-function inputChanged() {
-  //console.log(gridInput.value)
-  inputButton.disabled = !isInputValid(gridInput.value);
-  //console.log(isInputValid(gridInput.value))
-
-}
 
 function isInputValid(number) {
   if (isNaN(number) || parseInt(number) > 64 || parseInt(number) < 1 || number=="") {
