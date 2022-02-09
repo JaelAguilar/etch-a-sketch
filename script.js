@@ -34,7 +34,8 @@ function generateGrid(value) {
 
 
 function changeGrid() {
-    alert("Introduzca")
+  container.innerHTML=""
+    generateGrid(gridInput.value)
 }
 
 
