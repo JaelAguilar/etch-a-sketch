@@ -1,4 +1,4 @@
-let container = document.querySelector(".container");
+let container = document.querySelector(".pixels-container");
 let gridValue = 16
 
 generateGrid(gridValue);
