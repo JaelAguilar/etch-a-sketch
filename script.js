@@ -4,14 +4,20 @@ let gridInput = document.querySelector("#gridValue")
 let inputButton= document.querySelector(".changeButton")
 console.log(gridInput)
 
-
+//Generar el grid inicial
 generateGrid(gridValue);
 
+//Revisar cada 100ms si se ha cambiado el input
 setInterval(() => {
   inputButton.disabled = !isInputValid(gridInput.value)
 }, 100)
 
-
+/**
+ *Genera el grid dependiendo del valor que se indique.
+ *El grid resultará en value X value.
+ * @param {*} value
+ * @author JaelAguilar
+ */
 function generateGrid(value) {
     for (let i = 0; i < value; i++) {
       let row = document.createElement("div")
@@ -32,7 +38,11 @@ function changeGrid() {
 }
 
 
-
+/**
+ * Chacks if input is an integer and 1 < number < 64
+ * @param {*} number 
+ * @returns If input is valid
+ */
 function isInputValid(number) {
   if (isNaN(number) || parseInt(number) > 64 || parseInt(number) < 1 || number=="") {
     return false
