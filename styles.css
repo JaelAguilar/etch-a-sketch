@@ -10,12 +10,15 @@
 .grid-container{
     margin:10px;
     border-radius:20px;
-    background-color: red;
+    background-color: #E91F0C;
     padding:1px;
     width:50vw;
     height:50vw;
     max-height:80vmin;
     max-width:80vmin;
+    -moz-box-shadow: 10px 10px 16px #000000;
+-webkit-box-shadow: 10px 10px 16px #000000;
+box-shadow: 10px 10px 16px #000000;
 }
 
 .row{
@@ -43,4 +46,5 @@ body{
 
 body,html{
     height:100%;
+    background-color:#8BE8FF;
 }
