@@ -1,8 +1,7 @@
-let container = document.querySelector(".pixels-container");
+const container = document.querySelector(".pixels-container");
 let gridValue = 16
-let gridInput = document.querySelector("#gridValue")
-let inputButton= document.querySelector(".changeButton")
-console.log(gridInput)
+const gridInput = document.querySelector("#gridValue")
+const inputButton= document.querySelector(".changeButton")
 let isMouseDown=false
 
 //Generar el grid inicial
@@ -14,8 +13,12 @@ setInterval(() => {
 }, 100)
 
 //Revisar si el mouse está presionado o no
-document.addEventListener("mousedown", () => { isMouseDown = true });
-document.addEventListener("mouseup", () => {
+document.addEventListener("mousedown", (e) => {
+  e.preventDefault();
+  isMouseDown = true
+});
+document.addEventListener("mouseup", (e) => {
+  e.preventDefault()
   isMouseDown = false
 })
 
