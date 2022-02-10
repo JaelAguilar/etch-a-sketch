@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="menu">
-        <div class="logo">Etch a Sketch</div>
-        <input type="text" id="gridValue">
-        <button class="changeButton" onclick="changeGrid()">Change grid!</button>
-        
+    <div class="header">
+        <div class="logo">Etch a Sketch</div>        
     </div>
-    <div class="grid-container">
+    <div class="content">
+        <div class="controls">
+            <input type="text" id="gridValue">
+        <button class="changeButton" onclick="changeGrid()">Change grid!</button>
+        </div>
+        
+        <div class="grid-container">
     <div class="pixels-container"></div>
     </div>
+    </div>
+    
 </body>
 <script src="script.js"></script>
 </html>
