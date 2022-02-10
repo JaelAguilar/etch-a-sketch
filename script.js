@@ -59,7 +59,8 @@ function changeGrid() {
  * @returns If input is valid
  */
 function isInputValid(number) {
-  if (isNaN(number) || parseInt(number) > 64 || parseInt(number) < 1 || number=="") {
+  if (isNaN(number) || parseInt(number) > 100
+    || parseInt(number) < 1 || number == "") {
     return false
   }
   return true
