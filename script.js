@@ -85,6 +85,11 @@ function configurePixel(pixel) {
   })
 }
 
+/**
+ *Clears the content of the grid
+
+ *@author ObieMunoz
+ */
 function clear() {
   document.querySelectorAll(".colored").forEach(node => {
     node.classList.remove("colored")
