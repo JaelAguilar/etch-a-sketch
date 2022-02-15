@@ -1,8 +1,9 @@
 const container = document.querySelector(".pixels-container");
 const gridInput = document.querySelector("#gridValue")
 const inputButton = document.querySelector(".changeButton")
+const clearButton = document.querySelector("#clearSketch")
 let gridValue = 16
-let isMouseDown=false
+let isMouseDown = false
 
 //Generar el grid inicial
 generateGrid(gridValue);
@@ -25,6 +26,7 @@ document.addEventListener("mouseup", (e) => {
   e.preventDefault()
   isMouseDown = false
 })
+clearButton.addEventListener("click", () => clear())
 
 /**
  *Genera el grid dependiendo del valor que se indique.
@@ -33,29 +35,29 @@ document.addEventListener("mouseup", (e) => {
  * @author JaelAguilar
  */
 function generateGrid(value) {
-    for (let i = 0; i < value; i++) {
-      let row = document.createElement("div")
-      for (let j = 0; j < value; j++) {
-        let pixel = document.createElement("div")
-        configurePixel(pixel)
-        row.appendChild(pixel)
-      }
-      //column.innerText = "h";
-      row.classList.add("row")
-      container.appendChild(row)
+  for (let i = 0; i < value; i++) {
+    let row = document.createElement("div")
+    for (let j = 0; j < value; j++) {
+      let pixel = document.createElement("div")
+      configurePixel(pixel)
+      row.appendChild(pixel)
     }
+    //column.innerText = "h";
+    row.classList.add("row")
+    container.appendChild(row)
+  }
 }
 
 
 function changeGrid() {
-  container.innerHTML=""
-    generateGrid(gridInput.value)
+  container.innerHTML = ""
+  generateGrid(gridInput.value)
 }
 
 
 /**
  * Chacks if input is an integer and 1 < number < 64
- * @param {*} number 
+ * @param {*} number
  * @returns If input is valid
  */
 function isInputValid(number) {
@@ -67,7 +69,7 @@ function isInputValid(number) {
 }
 
 
-function paint(pixel,isClicked) {
+function paint(pixel, isClicked) {
   if (isMouseDown || isClicked) {
     pixel.classList.add("colored")
   }
@@ -79,6 +81,12 @@ function configurePixel(pixel) {
     paint(e.target, false)
   })
   pixel.addEventListener("click", (e) => {
-    paint(e.target,true)
+    paint(e.target, true)
+  })
+}
+
+function clear() {
+  document.querySelectorAll(".colored").forEach(node => {
+    node.classList.remove("colored")
   })
 }
